@@ -1,0 +1,27 @@
+{
+  "name": "@louffee/lib",
+  "version": "0.0.0",
+  "exports": {
+    "./jsx/is-compose-element": "./src/jsx/is-composite-element.ts",
+    "./jsx/is-native-element": "./src/jsx/is-native-element.ts",
+    "./jsx/is-react-class-component": "./src/jsx/is-react-class-component.ts",
+    "./jsx/is-react-component": "./src/jsx/is-react-component.ts",
+    "./jsx/is-react-element": "./src/jsx/is-react-element.ts",
+    "./jsx/is-react-function-component": "./src/jsx/is-react-function-component.ts",
+    "./camel-prefix-keys": "./src/camel-prefix-keys.ts",
+    "./camel-prefix": "./src/camel-prefix.ts",
+    "./debounce": "./src/debounce.ts",
+    "./format-currency": "./src/format-currency.ts",
+    "./get-github-repository-path": "./src/get-github-repository-path.ts",
+    "./is-object": "./src/is-object.ts",
+    "./prefix-keys": "./src/prefix-keys.ts",
+    "./prefix": "./src/prefix.ts",
+    "./remove-suffix": "./src/remove-suffix.ts",
+    "./suppress-suffix": "./src/suppress-suffix.ts",
+    "./throttle": "./src/throttle.ts"
+  },
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/packages/lib",
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}
