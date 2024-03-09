@@ -4,13 +4,8 @@ Louffee is a SaaS (Software as a Service) which intends to house students who
 adventure abroad by providing options for their international homes for lower
 prices in a trustful, transparent, and amazing way.
 
-<div style="display: flex; justify-content: center; gap: 2rem; margin: 4rem; overflow: hidden; border-radius: 0.5rem;">
-  <img src="./_/docs/assets/brands/louffee-48x48.svg" height="100" width="100" />
-  <div style="display: flex; flex-direction: column">
-    <strong>Louffee</strong>
-    <span>The way to connect students to housing abroad.</span>
-    <span>Safe. Smart. Easy.</span>
-  </div>
+<div align="center">
+  <img src="./_/docs/assets/readme-cover.png" />
 </div>
 
 As we make everything we do clear and visible, we have the whole project
