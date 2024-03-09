@@ -1,0 +1,50 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import GitHubRepoPathLink from '@louffee/storybook/local-addons/github-repo-path-link'
+
+import DangerIcon from '../danger-icon/danger-icon'
+
+<Meta 
+  title="Components/SemanticIcon"
+/>
+
+<GitHubRepoPathLink path="packages/ui/src/semantic-icon/semantic-icon.tsx" />
+
+# SemanticIcon
+
+The semantic icon is a component that displays an icon based on its meaning. In
+technical and practical terms, this component only wraps an `Icon` component
+passed as `children`, adding a flexbox layout and applying height and width 
+based on the calculated size of the icon.
+
+The `height` and `width` props are accepted. They're both forwarded to the inner
+SVG element in corner cases in which the necessity of overriding the default
+pre-calculated size arises.
+
+However, in common cases, the `height` and `width` props are not necessary, as
+the component will calculate the size based on the given `size` prop.
+
+## Usage
+
+To understand how the `SemanticIcon` acts, let's take a look at the JSX of the
+`DangerIcon` component:
+
+```tsx
+<SemanticIcon size="xl" className="bg-zinc-200/30 text-red-600 dark:text-red-400">
+  <Icon name="ExclamationTriangle" />
+</SemanticIcon>
+```
+
+By default, as the `SemanticIcon` only accepts `Icon` as children, it will set
+and render the `Icon` component with the `name` prop passed to it. Also, the
+`size` can be replicated as the one exported by the `Icon` component props and
+utilised to calculate the size of the icon automatically.
+
+Therefore, the 
+component won't require much customization in most cases, leaving its 
+enhancement to the class names. For instance, the combination of the `Icon` and 
+`SemanticIcon` and the class names in the example above will result in the same
+HTML as the `DangerIcon`. See below:
+
+<div className="flex justify-center">
+  <DangerIcon size="xl" />
+</div>
