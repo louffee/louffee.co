@@ -1,0 +1,11 @@
+{
+  "name": "@louffee/postcss-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["postcss.config.js", "tailwind.config.ts"],
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/config/postcss-config"
+}
