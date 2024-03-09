@@ -1,0 +1,4 @@
+{
+  "extends": "@louffee/tsconfig/tsconfig.base.json",
+  "include": ["src"]
+}
