@@ -1,6 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')
 
-const defaultConfiguration = require('../../packages/next-config/next.config.js')
+const defaultConfiguration = require('../../config/next-config/next.config.js')
 
 const packageJSON = require('./package.json')
 
