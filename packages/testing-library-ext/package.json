@@ -1,0 +1,9 @@
+{
+  "name": "@louffee/testing-library-ext",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./render-async": "./src/render-async.ts"
+  },
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/packages/testing-library-ext"
+}
