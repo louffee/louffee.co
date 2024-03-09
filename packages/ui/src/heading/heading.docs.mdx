@@ -1,0 +1,51 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import Link from 'next/link'
+
+import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
+
+import Heading from './heading'
+import * as Stories from './heading.stories'
+
+<Meta 
+  title="Components/Heading" 
+  argTypes={Stories.default.argTypes} 
+  args={Stories.default.args} 
+  parameters={Stories.default.parameters} />
+
+<GitHubRepoPath path="packages/ui/src/components/heading/heading.tsx" />
+
+# Heading
+
+The heading component is used to display a title or a section heading. It is 
+used to give a clear indication of what the user is looking at. Also, it 
+improves Search Engine Optimization (SEO) by providing a clear indication of 
+what the page is about.
+
+## Usage
+
+```tsx
+import Heading from '@louffee/ui/heading'
+
+<Heading variant='h1'>Lorem ipsum</Heading>
+```
+
+## Stories
+
+The Heading component has the following stories:
+
+<Story of={Stories.Overview} />
+
+## Hierarchy
+
+The HTML hierarchy of the Heading component is rendered as follows:
+
+<Canvas>
+  <div className='flex flex-col gap-4 max-w-72 lg:max-w-screen-md mx-auto'>
+    <Heading variant="h1">The quick brown fox jumps over the lazy dog and runs away</Heading>
+    <Heading variant="h2">The quick brown fox jumps over the lazy dog and runs away</Heading>
+    <Heading variant="h3">The quick brown fox jumps over the lazy dog and runs away</Heading>
+    <Heading variant="h4">The quick brown fox jumps over the lazy dog and runs away</Heading>
+    <Heading variant="h5">The quick brown fox jumps over the lazy dog and runs away</Heading>
+    <Heading variant="h6">The quick brown fox jumps over the lazy dog and runs away</Heading>
+  </div>
+</Canvas>
