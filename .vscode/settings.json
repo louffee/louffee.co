@@ -1,0 +1,85 @@
+{
+  "cSpell.words": [
+    "argstable",
+    "autodocs",
+    "behaviour",
+    "behaviours",
+    "biomejs",
+    "blockquote",
+    "codemod",
+    "colour",
+    "Corbacho's",
+    "docgen",
+    "formatjs",
+    "hookform",
+    "localematcher",
+    "louffee",
+    "neondatabase",
+    "NEXTAUTH",
+    "nextjs",
+    "nvmrc",
+    "Playfair",
+    "prismjs",
+    "sbdocs",
+    "shadcn",
+    "sonner",
+    "subcomponents",
+    "Supabase",
+    "testid",
+    "Tocbot",
+    "Turborepo",
+    "unoptimized",
+    "utilise",
+    "utilises",
+    "webp"
+  ],
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  },
+
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "biomejs.biome",
+
+  "symbols.files.associations": {
+    "tsconfig.next-app.json": "tsconfig",
+    "tsconfig.react-library.json": "tsconfig",
+    "*.docs.mdx": "storybook",
+    "*.test.tsx": "react-test",
+    "*.spec.tsx": "react-test",
+    "*.hbs": "brackets-red",
+    "*.db.schema.ts": "database",
+    ".env.*": "env"
+  },
+  "symbols.folders.associations": {
+    "entities": "folder-assets",
+    "infra": "folder-app",
+    "schemas": "folder-purple",
+    "docs": "folder-blue-outline",
+    "apps": "folder-app"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "tailwindCSS.experimental.classRegex": ["(styled)\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+  "tailwindCSS.experimental.configFile": "./packages/postcss-config/tailwind.config.ts"
+}
