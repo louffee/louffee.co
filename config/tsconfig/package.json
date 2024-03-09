@@ -1,0 +1,10 @@
+{
+  "name": "@louffee/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/config/tsconfig"
+}
