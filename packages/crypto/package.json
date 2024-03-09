@@ -1,0 +1,12 @@
+{
+  "name": "@louffee/crypto",
+  "version": "0.0.0",
+  "description": "The crypto package for the Louffee project",
+  "exports": {
+    "./encrypt": "./src/encrypt.ts",
+    "./decrypt": "./src/decrypt.ts"
+  },
+  "peerDependencies": {
+    "zod": "^3"
+  }
+}
