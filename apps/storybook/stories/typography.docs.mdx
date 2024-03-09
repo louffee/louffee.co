@@ -1,0 +1,69 @@
+import { Meta, Typeset } from '@storybook/blocks'
+
+<Meta title="Style Guide/Typography" />
+
+export const typography = {
+  type: {
+    sansSerif: '"Inter", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    serif: '"Playfair Display", serif'
+  },
+  weight: {
+    bold: "700",
+    extrabold: "800",
+    black: "900",
+  },
+  size: {
+    s12: 12,
+    s14: 14,
+    s16: 16,
+    s18: 18,
+    s20: 20,
+    s24: 24,
+    s36: 36,
+    s48: 48,
+    s60: 60,
+    s72: 72,
+    s96: 96,
+    s128: 128,
+  },
+};
+
+export const SampleText = "I like potatoes and I like chocolate milk";
+
+# Typography
+
+Our typography is designed to be clear and easy to read. We use a combination of
+serif and sans-serif fonts to create a clear hierarchy and to make the reading
+experience more enjoyable. We also use variations of the _lead_, _muted_, 
+etcetera. This typography system is heavily based on the typography styles 
+provided by [**shadcn/ui**](https://ui.shadcn.com/docs/components/typography).
+
+**Font families:** **Playfair Display** for the heading of level 1 and **Inter** 
+for the other headings, paragraph, blockquotes, and any other texts.
+
+The font [**Playfair Display**](https://fonts.google.com/specimen/Playfair+Display) 
+is a serif which is used for the heading of level 1 to create a clear hierarchy 
+and to make the reading experience more enjoyable and easy. Meanwhile, The font 
+[**Inter**](https://rsms.me/inter/) is a sans-serif which is used for the other 
+headings, paragraph, blockquotes, and any other texts. It is designed to be 
+clear and easy to read as well.
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s12),
+    Number(typography.size.s14),
+    Number(typography.size.s16),
+    Number(typography.size.s18),
+    Number(typography.size.s20),
+    Number(typography.size.s24),
+    Number(typography.size.s36),
+    Number(typography.size.s48),
+    Number(typography.size.s60),
+    Number(typography.size.s72),
+    Number(typography.size.s96),
+    Number(typography.size.s128),
+  ]}
+  fontWeight={typography.weight.black}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>

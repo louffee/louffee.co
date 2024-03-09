@@ -1,0 +1,60 @@
+{
+  "name": "@louffee/storybook",
+  "version": "0.0.0",
+  "exports": {
+    "./local-addons/github-repo-path-link": "./local-addons/github-repo-path-link.tsx"
+  },
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/apps/storybook",
+  "scripts": {
+    "storybook": "storybook dev -p 6006 --ci",
+    "build-storybook:docs": "storybook build --docs",
+    "build-storybook": "storybook build",
+    "test": "test-storybook"
+  },
+  "dependencies": {
+    "@louffee/ui": "*",
+    "@louffee/lib": "*",
+    "@radix-ui/react-slot": "^1",
+    "@radix-ui/react-icons": "^1",
+    "clsx": "^2.1.0",
+    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^2.2.1",
+    "next": "^14",
+    "react": "^18",
+    "react-dom": "^18",
+    "sonner": "^1.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7",
+    "@storybook/addon-actions": "^7",
+    "@storybook/addon-designs": "^7",
+    "@storybook/addon-docs": "^7",
+    "@storybook/addon-essentials": "^7",
+    "@storybook/addon-interactions": "^7",
+    "@storybook/addon-links": "^7",
+    "@storybook/addon-styling": "^1",
+    "@storybook/blocks": "^7",
+    "@storybook/nextjs": "^7",
+    "@storybook/preview-api": "^7",
+    "@storybook/react": "^7",
+    "@storybook/test-runner": "^0.16.0",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/jest": "^0.2.3",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.17",
+    "babel-loader": "^8.2.5",
+    "fs": "^0.0.1-security",
+    "postcss": "^8.4.35",
+    "postcss-pseudo-companion-classes": "^0.1.1",
+    "remark-gfm": "^4.0.0",
+    "rollup-plugin-polyfill-node": "^0.10.2",
+    "storybook": "^7",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-radix": "^2.8.0",
+    "typescript": "^5",
+    "vite": "^4.1.2"
+  }
+}

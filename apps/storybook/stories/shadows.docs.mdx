@@ -1,0 +1,19 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import merge from '../../../packages/ui/src/engine/merge'
+
+<Meta title="Style Guide/Shadows" />
+
+# Shadows
+
+A list of shadows which help in adding depth and realisim to our designs.
+
+The below shadows are default utility classes from [Tailwind CSS](https://tailwindcss.com).
+
+<section className="mt-48 flex space-y-10 flex-col lg:space-x-8 lg:space-y-0 lg:flex-row gap-8 max-w-[min(968px,_100%)] flex-wrap">
+  {['shadow', 'shadow-sm', 'shadow-md', 'shadow-lg', 'shadow-xl', 'shadow-2xl'].map((className) => (
+    <div key={className} className={merge('p-16 rounded-12 bg-white border-2 border-black-500', className)}>
+      {className}
+    </div>
+  ))}
+</section>

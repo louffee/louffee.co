@@ -1,0 +1,301 @@
+.sbdocs,
+ul > li,
+.toc-wrapper,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+blockquote,
+pre,
+a,
+code,
+em,
+strong,
+small,
+sub,
+sup,
+ins,
+del,
+mark,
+abbr,
+dfn,
+kbd,
+samp,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+figure,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  font-family: "Inter var", "Inter", system-ui, -apple-system, 
+              BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+              'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+h2 {
+  /* Reset the border-bottom. */
+  border-bottom: none !important;
+}
+
+.sbdocs {
+  padding: 0 !important;
+}
+
+#docs-root {
+  overflow: hidden;
+}
+
+.toc-wrapper {
+  margin-right: 1rem;
+}
+
+.sbdocs-content {
+  max-width: max(380px, 100vw);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4vh;
+  margin-bottom: 8vh;
+}
+
+.sbdocs.sbdocs-h1, 
+.sbdocs.sbdocs-h2,
+.sbdocs.sbdocs-h3,
+.sbdocs.sbdocs-h4,
+.sbdocs.sbdocs-h5,
+.sbdocs.sbdocs-h6,
+.sbdocs h1,
+.sbdocs h2,
+.sbdocs h3,
+.sbdocs h4,
+.sbdocs h5,
+.sbdocs h6 {
+  font-family: "Inter", sans-serif !important;
+}
+
+.sbdocs h1 {
+  font-weight: 700;
+}
+
+.sbdocs h2 {
+  font-weight: 600;
+}
+
+.sbdocs h3 {
+  font-weight: 500;
+}
+
+.sbdocs.sbdocs-h1, 
+.sbdocs h1 {
+  font-weight: 600;
+  font-size: 42px;
+}
+
+.sbdocs.sbdocs-h1 {
+  margin: 0 0 82px 0;
+}
+
+.sbdocs.sbdocs-h2 {
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-top: 2px solid rgba(0, 0, 0, 0.12);
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  margin: 82px 0 0 0;
+}
+
+.sbdocs.sbdocs-p {
+  max-width: 560px;
+  margin: 0 0 12px 0;
+}
+
+/* .sbdocs.sbdocs-content {
+  width: 1200px;
+  max-width: 100%;
+} */
+
+/** Docs table **/
+.custom-args-wrapper {
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 1rem;
+}
+
+.docblock-argstable-body {
+  box-shadow: none !important;
+  font-size: 14px;
+}
+
+/* .docblock-argstable-head tr th, */
+.docblock-argstable-body tr td {
+  /* padding-left: 0!important; */
+  padding: 20px !important;
+}
+
+/** Column titles **/
+.docblock-argstable-body tr td > span,
+.docblock-argstable-head tr th > span {
+  color: #525252 !important;
+  font-weight: 500 !important;
+}
+
+.docblock-argstable-body div p,
+.docblock-argstable-body div span {
+  color: #8f8f8f !important;
+}
+
+/** Custom components **/
+.story-title {
+  margin: 0 0 82px 0;
+}
+
+.story-title.offset {
+  margin-top: 100px;
+}
+
+.story-title h1 {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.story-title h1 span {
+  color: #9ca3af;
+  font-family: "Inter var", "Inter", sans-serif;
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.story-title p {
+  color: #111827;
+  font-size: 16px;
+}
+
+.examples {
+  background-color: #f9fafb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.examples-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.examples-title {
+  color: #8f8f8f;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.examples-item-title {
+  font-size: 12px;
+  color: #8f8f8f;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.examples-item {
+  margin: 0 20px;
+}
+
+.examples-footnote p,
+.examples-footnote ul,
+.examples-footnote li {
+  color: #8f8f8f;
+  font-size: 14px;
+}
+
+.examples-footnote ul {
+  padding-left: 8px;
+}
+
+.examples-footnote li {
+  margin: 0 !important;
+}
+
+.story-note {
+  background-color: #f9fafb;
+  font-size: 14px;
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.story-note > div {
+  max-width: 600px;
+}
+
+/** SB Docs Preview **/
+.sbdocs-preview {
+  width: 100vw;
+  left: calc((100vw - 1200px) / -2);
+  box-shadow: none !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: none !important;
+}
+
+.docs-story > div:first-child {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.docs-story .innerZoomElementWrapper > div {
+  border: none !important;
+}
+
+.sb-main-padded {
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .sbdocs-preview {
+    left: -24px;
+    width: calc(100vw + 48px);
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .sbdocs.sbdocs-content {
+    padding: 24px !important;
+  }
+}
+
+.docs-story {
+  padding: 24px !important;
+}
