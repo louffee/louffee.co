@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import Link from 'next/link'
+
+import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
+
+import Icon from '../icon/icon'
+
+import IconButton from './icon-button'
+import * as Stories from './icon-button.stories'
+
+<Meta 
+  title="Components/IconButton" 
+  argTypes={Stories.default.argTypes} 
+  args={Stories.default.args} 
+  parameters={Stories.default.parameters} />
+
+<GitHubRepoPath path="packages/ui/src/icon-button/icon-button.tsx" />
+
+# IconButton
+
+The IconButton component is a simple IconButton that can be used to trigger an action.
+
+## Usage
+
+```tsx
+import IconButton from '@louffee/ui/icon-button'
+
+<IconButton variant="primary" icon="Rocket" />
+```
+
+Then, you can use the IconButton component in your app like this:
+
+<IconButton variant="primary" icon="Rocket" />
+
+## Stories
+
+The IconButton component has different stories to showcase its different states and 
+variants. Below, a few of them are showcased:
+
+<Story of={Stories.Overview} />
+
+## Sorts of IconButtons
+
+The IconButton component can be used in different sorts of IconButtons:
+
+<div className="flex items-center justify-between">
+  <IconButton variant="primary" icon="ArrowRight" />
+  <IconButton variant="secondary" icon="ArrowRight" />
+  <IconButton variant="destructive" icon="ArrowRight" />
+  <IconButton variant="outlined" icon="ArrowRight" />
+  <IconButton variant="ghost" icon="ArrowRight" />
+  <IconButton variant="link" icon="ArrowRight" />
+</div>
