@@ -1,0 +1,23 @@
+import { IconGallery, IconItem, Meta } from '@storybook/blocks'
+
+import Icon from './icon'
+import icons from './icons'
+
+<Meta title='Style Guide/Iconography' />
+
+# Iconography
+
+The iconography system is a set of icons that are used to represent actions, 
+objects, and concepts in a visual way. They are used to help users understand 
+the content and functionality of a product.
+
+Internally, we use the icons from the [Radix UI](https://www.radix-ui.com/icons)
+library.
+
+<IconGallery>
+  {Object.keys(icons).map((iconName) => (
+    <IconItem key={iconName} name={iconName}>
+      <Icon name={iconName} width={24} height={24} className="text-black" />
+    </IconItem>
+  ))}
+</IconGallery>

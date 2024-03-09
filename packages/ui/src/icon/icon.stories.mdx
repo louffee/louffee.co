@@ -1,0 +1,26 @@
+import { Meta, Story } from '@storybook/blocks'
+
+import Icon from './icon'
+
+<Meta title="Components/Icon" component={Icon} />
+
+# Icon
+
+The component which renders an icon based on the given name from our 
+iconography. The icons are SVGs found in the internal modules of the Louffee's 
+UI package.
+
+All the icons are available in the [iconography](#?path=/docs/style-guide-iconography--docs)
+page of the style guide.
+
+## Usage
+
+```tsx
+import Icon from '@louffee/ui/icon'
+
+<Icon name="GitHubLogo" height={60} width={60} className="text-black" />
+```
+
+Then, the result will be:
+
+<Icon name="GitHubLogo" height={60} width={60} className="text-black" />
