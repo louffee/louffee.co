@@ -1,0 +1,23 @@
+{
+  "name": "@louffee/i18n",
+  "version": "0.0.0",
+  "exports": {
+    "./detect-language-middleware": "./src/detect-language-middleware.ts",
+    "./dict": "./src/dict.ts",
+    "./get-language": "./src/get-language.ts",
+    "./has-pathname-any-language": "./src/has-pathname-any-language.ts",
+    "./has-pathname-language": "./src/has-pathname-language.ts",
+    "./import-translation": "./src/import-translation.ts",
+    "./match-language": "./src/match-language.ts"
+  },
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/packages/i18n",
+  "devDependencies": {
+    "@types/negotiator": "^0.6.3",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
+    "negotiator": "^0.6.2",
+    "server-only": "^0.0.1"
+  }
+}
