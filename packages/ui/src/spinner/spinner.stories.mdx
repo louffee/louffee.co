@@ -1,0 +1,28 @@
+import { ArgsTable, Meta } from '@storybook/blocks'
+
+import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
+
+import Spinner from './spinner'
+
+<Meta title="Components/Spinner" component={Spinner} />
+
+<GitHubRepoPath path="packages/ui/src/spinner/spinner.tsx" />
+
+# Spinner
+
+A spinner component is used to indicate that a page or component is loading. It
+is recommended to use a spinner when a skeleton loading state is not possible or
+too complex to implement or be understood by the user.
+
+## Usage
+
+```tsx
+<Spinner className="text-rose-800" />
+```
+
+The spinner component can be customized by passing a class name to the 
+component.
+
+<div className="flex items-center justify-center gap-3">
+  <Spinner className="text-rose-800" />
+</div>
