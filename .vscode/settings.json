@@ -81,5 +81,5 @@
   },
 
   "tailwindCSS.experimental.classRegex": ["(styled)\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-  "tailwindCSS.experimental.configFile": "./packages/postcss-config/tailwind.config.ts"
+  "tailwindCSS.experimental.configFile": "./config/postcss-config/tailwind.config.ts"
 }
