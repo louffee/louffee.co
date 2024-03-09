@@ -1,1 +1,1 @@
-module.exports = require('./packages/postcss-config/tailwind.config')
+module.exports = require('./config/postcss-config/tailwind.config')
