@@ -1,0 +1,42 @@
+import { Meta, Story } from '@storybook/addon-docs'
+
+import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
+
+import TopBarButton from './top-bar-button'
+import * as Stories from './top-bar-button.stories'
+
+<Meta 
+  title="Components/TopBarButton"
+  component={TopBarButton}
+  argTypes={Stories.default.argTypes}
+  args={Stories.default.args} />
+
+<GitHubRepoPath path="packages/ui/src/top-bar-button/top-bar-button.tsx" />
+
+# TopBarButton
+
+The component that renders an [anchor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+HTML element that triggers a redirection via the Next.js 
+[Link API](https://nextjs.org/docs/app/api-reference/components/link).
+
+## Usage
+
+```tsx
+import TopBarButton from '@louffee/ui/top-bar-button'
+
+<TopBarButton href="/?path=/docs/components-topbarbutton--docs">
+  Lorem Ipsum
+</TopBarButton>
+```
+
+Then, the component will render an anchor HTML element with the text "Lorem 
+Ipsum" and a redirection to the home page.
+
+<TopBarButton href="/?path=/docs/components-topbarbutton--docs">Lorem Ipsum</TopBarButton>
+
+## Stories
+
+The TopBarButton component has different stories to showcase its different 
+states. Below, a few of them are showcased:
+
+<Story of={Stories.Overview} />
