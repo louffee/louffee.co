@@ -33,7 +33,7 @@
   "peerDependencies": {
     "typescript": "^5"
   },
-  "workspaces": ["./packages/*", "./apps/*"],
+  "workspaces": ["./packages/*", "./apps/*", "./config/*"],
   "author": {
     "email": "engineering@louffee.co",
     "name": "Louffee Engineering Team",
