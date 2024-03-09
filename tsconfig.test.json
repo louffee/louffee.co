@@ -1,0 +1,3 @@
+{
+  "extends": "@louffee/tsconfig/tsconfig.test.json"
+}
