@@ -1,0 +1,44 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import Link from 'next/link';
+
+import GitHubRepoPathLink from '@louffee/storybook/local-addons/github-repo-path-link'
+
+import Checkbox from './checkbox'
+import * as Stories from './checkbox.stories'
+
+<Meta 
+  title="Components/Checkbox"
+  argTypes={Stories.default.argTypes}
+  args={Stories.default.args}
+  parameters={Stories.default.parameters}
+/>
+
+<GitHubRepoPathLink path="packages/ui/src/checkbox/checkbox.tsx" />
+
+# Checkbox
+
+The checkbox component is used to select or deselect an option.
+
+## Usage
+
+```tsx
+import Checkbox from '@louffee/ui/checkbox'
+
+<Checkbox />
+```
+
+Then, the checkbox would appear in the app like this:
+
+<div className='flex items-center'>
+  <Checkbox />
+</div>
+
+## Stories
+
+The Checkbox component has a few different scenarios in which it can be applied,
+below they're showcased:
+
+<div className='flex flex-col justify-center'>
+  <Story of={Stories.Overview} />
+  <Story of={Stories.WithLabel} />
+</div>
