@@ -1,0 +1,67 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import Link from 'next/link'
+
+import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
+
+import styled from './styled'
+
+<Meta title="Functional/styled" />
+
+<GitHubRepoPath path="packages/ui/src/engine/styled.ts" />
+
+# styled
+
+The `styled()` function is a utility to create combined variants and base 
+classes for a component or element. This function creates and returns another 
+function which requires the props based on the variants passed to the `styled`. 
+
+If provided variants, it will require properties from the generated function 
+call. This function is based on the 
+[`cn()`](https://github.com/shadcn-ui/ui/blob/0fae3fd93ae749aca708bdfbbbeddc5d576bfb2e/templates/next-template/lib/utils.ts#L4C1-L6C2) 
+function from [**shadcn/ui**](https://ui.shadcn.com) collection.
+
+## Usage
+
+```ts
+import styled from '@louffee/ui/styled'
+
+const componentStyles = styled({
+  base: 'text-gray-900',
+  variants: {
+    size: {
+      sm: 'text-sm',
+      md: 'text-md',
+      lg: 'text-lg',
+    },
+    weight: {
+      light: 'font-light',
+      normal: 'font-normal',
+      bold: 'font-bold',
+    },
+  },
+})
+
+const className = componentStyles({ size: 'md', weight: 'normal' })
+```
+
+## TypeScript
+
+To get the props defined inside the `variants` prop passed to the `styled()`
+function, you can use the `StyleVariationProps` from the same export statement.
+See an example below:
+
+```tsx
+const textStyles = styled({
+  base: 'text-gray-900',
+  variants: {
+    weight: {
+      light: 'font-light',
+      normal: 'font-normal',
+      bold: 'font-bold',
+    },
+  },
+})
+
+type TextProps = StyleVariationProps<typeof textStyles>
+// { weight: 'light' | 'normal' | 'bold' }
+```
