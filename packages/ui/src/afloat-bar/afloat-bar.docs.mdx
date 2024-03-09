@@ -1,0 +1,41 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import AfloatBar from './afloat-bar'
+import * as Stories from './afloat-bar.stories'
+
+import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
+
+<Meta 
+  title="Components/AfloatBar" 
+  argTypes={Stories.default.argTypes}
+  args={Stories.default.args}
+  parameters={Stories.default.parameters} />
+
+<GitHubRepoPath path="packages/ui/src/afloat-bar/afloat-bar.tsx" />
+
+# AfloatBar
+
+The AfloatBar component is a floating bar that can be used to display a message,
+a call to action, or any other content.
+
+## Usage
+
+```tsx
+import AfloatBar from '@louffee/ui/afloat-bar'
+
+<AfloatBar>Lorem Ipsum</AfloatBar>
+```
+
+Then, the component will be rendered as:
+
+<AfloatBar>Lorem Ipsum</AfloatBar>
+
+## Stories
+
+The AfloatBar component has several stories. Below, a few of them are showcased:
+
+<Story of={Stories.Overview} />
+
+## Props
+
+<ArgsTable of={AfloatBar} />
