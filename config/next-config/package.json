@@ -1,0 +1,10 @@
+{
+  "name": "@louffee/next-config",
+  "private": true,
+  "description": "The default configuration for Next.js apps of Louffee. ⛏️",
+  "files": ["next.config.js"],
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/config/next-config",
+  "peerDependencies": {
+    "next": "^14"
+  }
+}
