@@ -12,6 +12,7 @@
     "docgen",
     "formatjs",
     "hookform",
+    "initialises",
     "localematcher",
     "louffee",
     "neondatabase",
@@ -31,6 +32,7 @@
     "unoptimized",
     "utilise",
     "utilises",
+    "VERCEL",
     "webp"
   ],
 
