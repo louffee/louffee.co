@@ -1,0 +1,16 @@
+<svg
+  width="48"
+  height="48"
+  viewbox="0 0 48 48"
+  fill="#fff"
+  xmlns="http://www.w3.org/2000/svg">
+  <title>Louffee Logo</title>
+  <path
+    d="M21.6 39.5077C29.0431 39.5077 35.0769 33.4739 35.0769 26.0308C35.0769 18.5877 29.0431 12.5538 21.6 12.5538C14.1569 12.5538 8.12308 18.5877 8.12308 26.0308C8.12308 33.4739 14.1569 39.5077 21.6 39.5077Z"
+    stroke="#be123c"
+    stroke-width="4"
+  />
+  <path d="M8.50011 11.0949L8.12286 26.6026" stroke="#be123c" stroke-width="4" />
+  <path d="M21.9376 5.38553L42.826 26.2741" stroke="#be123c" stroke-width="4" />
+  <path d="M21.7846 39.5077H35.8154" stroke="#be123c" stroke-width="4" />
+</svg>
