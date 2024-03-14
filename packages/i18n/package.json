@@ -2,6 +2,7 @@
   "name": "@louffee/i18n",
   "version": "0.0.0",
   "exports": {
+    "./constants": "./src/constants.ts",
     "./detect-language-middleware": "./src/detect-language-middleware.ts",
     "./dict": "./src/dict.ts",
     "./get-language": "./src/get-language.ts",
