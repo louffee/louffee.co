@@ -2,6 +2,12 @@
   "name": "@louffee/lib",
   "version": "0.0.0",
   "exports": {
+    "./constants/alphanumeric": "./src/constants/alphanumeric.ts",
+    "./constants/digits": "./src/constants/digits.ts",
+    "./constants/letters": "./src/constants/letters.ts",
+    "./constants/lowercase-letters": "./src/constants/lowercase-letters.ts",
+    "./constants/special-characters": "./src/constants/special-characters.ts",
+    "./constants/uppercase-letters": "./src/constants/uppercase-letters.ts",
     "./jsx/is-compose-element": "./src/jsx/is-composite-element.ts",
     "./jsx/is-native-element": "./src/jsx/is-native-element.ts",
     "./jsx/is-react-class-component": "./src/jsx/is-react-class-component.ts",
@@ -12,8 +18,12 @@
     "./camel-prefix": "./src/camel-prefix.ts",
     "./debounce": "./src/debounce.ts",
     "./format-currency": "./src/format-currency.ts",
+    "./has-any-lowercase-letters": "./src/has-any-lowercase-letters.ts",
     "./get-github-repository-path": "./src/get-github-repository-path.ts",
+    "./has-any-special-character": "./src/has-any-special-character.ts",
+    "./has-any-uppercase-letters": "./src/has-any-uppercase-letters.ts",
     "./is-object": "./src/is-object.ts",
+    "./parse-form-data": "./src/parse-form-data.ts",
     "./prefix-keys": "./src/prefix-keys.ts",
     "./prefix": "./src/prefix.ts",
     "./remove-suffix": "./src/remove-suffix.ts",
@@ -23,5 +33,8 @@
   "homepage": "https://github.com/louffee/louffee.co/tree/main/packages/lib",
   "devDependencies": {
     "typescript": "^5"
+  },
+  "peerDependencies": {
+    "colors": "^1.4.0"
   }
 }
