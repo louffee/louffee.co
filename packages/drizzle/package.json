@@ -1,0 +1,28 @@
+{
+  "name": "@louffee/drizzle",
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/packages/drizzle",
+  "scripts": {
+    "db:migration": "bun ./db/migration.ts",
+    "db:generate": "bun x drizzle-kit generate:pg",
+    "db:studio": "bun x drizzle-kit studio --port --verbose",
+    "db:seed": "bun ./db/seed.ts"
+  },
+  "peerDependencies": {
+    "@louffee/env": "workspace:*",
+    "@supabase/supabase-js": "^2",
+    "@supabase/ssr": "^0.1.0",
+    "drizzle-orm": "^0.29.4",
+    "drizzle-zod": "^0.5.1",
+    "postgres": "^3.4.3",
+    "zod": "^3"
+  },
+  "devDependencies": {
+    "@auth/core": "^0.28.0",
+    "@auth/drizzle-adapter": "^0.8.0",
+    "@types/pg": "^8.11.2",
+    "drizzle-kit": "^0.20.14",
+    "dotenv": "^16.4.5"
+  }
+}
