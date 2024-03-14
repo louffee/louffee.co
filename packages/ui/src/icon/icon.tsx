@@ -1,6 +1,6 @@
 'use client'
 
-import { SVGAttributes, forwardRef } from 'react'
+import { forwardRef, type SVGAttributes } from 'react'
 
 import merge from '../engine/merge'
 
@@ -14,7 +14,7 @@ export type IconForwardedReferenceType = SVGSVGElement
 type SVGSVGElementAttributes = SVGAttributes<SVGSVGElement>
 type SVGSVGElementAttributesExceptSome = Omit<SVGSVGElementAttributes, 'children'>
 
-export { IconName }
+export type { IconName }
 
 export interface IconProps extends SVGSVGElementAttributesExceptSome {
   /**
