@@ -1,0 +1,17 @@
+{
+  "name": "@louffee/hook-form",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./field-controller": "./src/field-controller.tsx",
+    "./form-controller": "./src/form-controller.tsx",
+    "./use-form": "./src/use-form.ts"
+  },
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/packages/hook-form",
+  "peerDependencies": {
+    "@hookform/resolvers": "^3",
+    "react": "^18",
+    "react-hook-form": "^7",
+    "zod": "^3.22.4"
+  }
+}
