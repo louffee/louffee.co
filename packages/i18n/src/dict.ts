@@ -1,5 +1,3 @@
-import setLanguage from './set-language'
-
 export interface DictOptions<T extends Record<string, string>, L extends string, U extends string> {
   /**
    * The default language of the dictionary.
@@ -23,9 +21,7 @@ export interface DictOptions<T extends Record<string, string>, L extends string,
   }
 }
 
-export interface DictTranslationFn<T extends Record<string, string>> {
-  <K extends keyof T>(key: K): string & T[K]
-}
+export type DictTranslationFn<T extends Record<string, string>> = <K extends keyof T>(key: K) => string & T[K]
 
 /**
  * The `dict()` function works as a factory which orchestrates the dictionary
@@ -46,8 +42,6 @@ async function dict<T extends Record<string, string>, L extends string, U extend
 
   const defaultDictMap = await loadDefaultDictMapFn()
   const languageDictMap = hasLanguage ? await loadLanguageDictMapFn() : ({} as T)
-
-  setLanguage(hasLanguage ? language : defaultLanguage)
 
   /**
    * The `t()` function returns the translation for the given key. If the key

@@ -1,5 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse, type NextRequest } from 'next/server'
 
+import constants from './constants'
 import hasPathnameAnyLanguage from './has-pathname-any-language'
 import matchLanguage, { type MatchLanguageOptions } from './match-language'
 import shouldIgnorePath from './should-ignore-path'
@@ -70,8 +71,16 @@ function detectLanguageMiddleware({ defaultLanguage, languages, ignoredPaths }: 
       const redirectBase = request.url
 
       const href = `${redirectBase}${redirectPath}`
-      return NextResponse.redirect(href)
+
+      const response = NextResponse.next()
+      response.cookies.set(constants.LANGUAGE_COOKIE_NAME, locale)
+
+      return NextResponse.rewrite(href, response)
     }
+
+    const response = NextResponse.next()
+    response.cookies.set(constants.LANGUAGE_COOKIE_NAME, defaultLanguage)
+    return response
   }
 }
 
