@@ -1,0 +1,9 @@
+{
+  "extends": "@louffee/tsconfig/tsconfig.next-app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  }
+}
