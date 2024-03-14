@@ -41,7 +41,8 @@
       "trailingComma": "all",
       "jsxQuoteStyle": "double",
       "quoteStyle": "single"
-    }
+    },
+    "globals": ["test", "describe", "expect", "afterAll", "afterEach", "beforeAll", "beforeEach", "vi"]
   },
   "formatter": {
     "enabled": true,
