@@ -12,7 +12,7 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Brand/Logo',
+  title: 'Library/Logo',
   component: Logo,
   argTypes: {
     height: {

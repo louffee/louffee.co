@@ -19,7 +19,7 @@ export const WithTypography: Story = {
 WithTypography.storyName = '+ Typography'
 
 export default {
-  title: 'Playground/SuccessIcon',
+  title: 'Library/SuccessIcon',
   component: SuccessIcon,
   args: {
     size: 'md',

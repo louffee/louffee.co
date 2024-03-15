@@ -44,20 +44,22 @@ export type IconButtonForwardedReferenceType = ButtonForwardedReferenceType
  * <IconButton icon="GitHubLogo" />
  * ```
  */
-const IconButton = forwardRef<IconButtonForwardedReferenceType, IconButtonProps>(({ icon, children, ...props }, ref) => {
-  const child = (icon ? <Icon name={icon} height={20} width={20} /> : children) as JSX.Element | ReactElement<IconProps>
+const IconButton = forwardRef<IconButtonForwardedReferenceType, IconButtonProps>(
+  ({ icon, children, variant = 'primary', asChild = false, ...props }, ref) => {
+    const child = (icon ? <Icon name={icon} height={20} width={20} /> : children) as JSX.Element | ReactElement<IconProps>
 
-  if (icon && children) {
-    console.error(
-      'You should not pass both icon and children to an icon button. This will default the icon property to the icon prop, but it is not recommended to pass both because the computation of the properties will be run over the children which will not be used. Please remove either the icon prop or the children.',
+    if (icon && children) {
+      console.error(
+        'You should not pass both icon and children to an icon button. This will default the icon property to the icon prop, but it is not recommended to pass both because the computation of the properties will be run over the children which will not be used. Please remove either the icon prop or the children.',
+      )
+    }
+
+    return (
+      <Button {...props} asChild={asChild} size="icon" ref={ref}>
+        {child}
+      </Button>
     )
-  }
-
-  return (
-    <Button {...props} size="icon" ref={ref}>
-      {child}
-    </Button>
-  )
-})
+  },
+)
 
 export default IconButton

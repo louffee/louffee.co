@@ -7,7 +7,7 @@ type Story = StoryObj<LabelProps>
 export const Overview: Story = {}
 
 export default {
-  title: 'Playground/Label',
+  title: 'Library/Label',
   component: Label,
   args: {
     children: 'Lorem ipsum',

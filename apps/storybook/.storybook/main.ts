@@ -1,23 +1,6 @@
 import * as path from 'node:path'
 
-import type { StorybookConfig } from '@storybook/nextjs'
-
-/**
- * The `getAbsolutePath()` function is used to resolve the absolute path of a
- * given package name. It points to the `package.json` file of the package.
- *
- * This function is particularly useful when we're running the Storybook in
- * monorepo mode, and we want to resolve the absolute path of a package while
- * starting up the Storybook with [Yarn](https://yarnpkg.com/).
- *
- * As we're using Bun Workspaces and it is still in the experimental phase, we
- * need to resolve the absolute path of the package to make sure that the
- * Storybook can find the package and its `package.json` file. Let's avoid some
- * headaches for now.
- */
-function getAbsolutePath(value: string) {
-  return path.dirname(require.resolve(path.join(value, 'package.json')))
-}
+import remarkGfm from 'remark-gfm'
 
 /**
  * The constant `WORKSPACE_ROOT` is used to define the root of the workspace
@@ -29,24 +12,35 @@ const WORKSPACE_ROOT = '../../..' as const
  * The constant `STORYBOOK_FILENAME_ANNOTATION` is used to define the annotation
  * for the storybook files. It uses the glob pattern to find the files.
  */
-const STORYBOOK_FILENAME_ANNOTATION = '@(stories|docs)' as const
+const STORYBOOK_FILENAME_ANNOTATION = 'stories' as const
 
 /**
  * The constant `STORYBOOK_FILE_EXTENSIONS` is used to define the file
  * extensions for the storybook files. It uses the glob pattern to find the
  * files.
  */
-const STORYBOOK_FILE_EXTENSIONS = '@(ts|tsx|mdx)' as const
+const STORYBOOK_FILE_EXTENSIONS = '@(ts|tsx)' as const
 
 /**
  * The `getStoriesGlob()` function is used to define the location of the stories
- * and documentation files. It uses the glob pattern to find the files.
+ * files. It uses the glob pattern to find the files.
  *
  * It uses the given `pathname` parameter from the `WORKSPACE_ROOT` to find the
- * stories and documentation files.
+ * stories files.
  */
-function getStoriesGlob(pathname: string) {
+function getStoriesGlob(pathname) {
   return `${WORKSPACE_ROOT}/${pathname}/*.${STORYBOOK_FILENAME_ANNOTATION}.${STORYBOOK_FILE_EXTENSIONS}`
+}
+
+/**
+ * The `getDocumentationGlob()` function is used to define the location of the
+ * documentation files. It uses the glob pattern to find the files.
+ *
+ * It uses the given `pathname` parameter from the `WORKSPACE_ROOT` to find the
+ * documentation files.
+ */
+function getDocumentationGlob(pathname: string) {
+  return `${WORKSPACE_ROOT}/${pathname}/*.docs.mdx`
 }
 
 /**
@@ -58,25 +52,43 @@ const stories = [
   getStoriesGlob('apps/storybook/stories'),
   getStoriesGlob('apps/www/src/components'),
   getStoriesGlob('apps/www/src/domains/**'),
+  getDocumentationGlob('packages/**/**'),
+  getDocumentationGlob('apps/storybook/stories'),
+  getDocumentationGlob('apps/www/src/components'),
+  getDocumentationGlob('apps/www/src/domains/**'),
 ]
 
-const config: StorybookConfig = {
+/**
+ * @type {require('@storybook/nextjs').StorybookConfig}
+ */
+const config = {
   stories,
   addons: [
-    getAbsolutePath('@storybook/addon-links'),
-    getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@storybook/addon-interactions'),
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
     {
-      name: getAbsolutePath('@storybook/addon-postcss'),
+      name: '@storybook/addon-postcss',
       options: {
         postcssLoaderOptions: {
           implementation: require('postcss'),
         },
       },
     },
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
+        },
+      },
+    },
+    '@storybook/addon-mdx-gfm',
   ],
   framework: {
-    name: getAbsolutePath('@storybook/nextjs') as '@storybook/nextjs',
+    name: '@storybook/nextjs',
     options: {
       // builder: {
       //   fsCache: true,
@@ -138,7 +150,9 @@ const config: StorybookConfig = {
   },
 
   docs: {
-    autodocs: false,
+    autodocs: 'tag',
+    defaultName: 'Documentation',
   },
 }
-export default config
+
+module.exports = config

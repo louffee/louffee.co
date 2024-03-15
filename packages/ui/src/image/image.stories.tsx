@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import Image, { type ImageProps } from './image'
 
@@ -16,7 +16,7 @@ export const UnsplashRandom: Story = {
 }
 
 export default {
-  title: 'Playground/Image',
+  title: 'Library/Image',
   component: Image,
   args: {
     priority: false,
@@ -136,39 +136,6 @@ export default {
         'A Data URL to be used as a placeholder image before the src image successfully loads. Only takes effect when combined with [`placeholder="blur"`](https://nextjs.org/docs/pages/api-reference/components/image#placeholder).\n\nMust be a base64-encoded image. It will be enlarged and blurred, so a very small image (10px or less) is recommended.\n\nIncluding larger images as placeholders may harm your application performance.\n\n**Prop name:** `blurDataURL`',
       control: {
         type: null,
-      },
-    },
-    // NOTE: The following attributes are removed from the table because they
-    //       are from the Next.js API and are either marked as deprecated or
-    //       are not primarily used by the consumer of the component.
-    layout: {
-      table: {
-        disable: true,
-      },
-    },
-    lazyRoot: {
-      table: {
-        disable: true,
-      },
-    },
-    lazyBoundary: {
-      table: {
-        disable: true,
-      },
-    },
-    objectFit: {
-      table: {
-        disable: true,
-      },
-    },
-    objectPosition: {
-      table: {
-        disable: true,
-      },
-    },
-    onLoadingComplete: {
-      table: {
-        disable: true,
       },
     },
   },

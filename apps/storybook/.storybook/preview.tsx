@@ -21,22 +21,18 @@ window.getEmbedNamespace = () => {
   return namespace
 }
 
+/**
+ * The `preview` object is used to define the parameters for the storybook
+ * preview.
+ */
 const preview: Preview = {
   parameters: {
     actions: {
       argTypesRegex: '^on[A-Z].*',
     },
     layout: 'centered',
-    previewTabs: {
-      previewTabs: {
-        'storybook/docs/panel': {
-          index: -1,
-        },
-      },
-    },
     docs: {
       container: DocsContainer,
-      disabled: true,
 
       // 👇 NOTE: Enable the Table of Contents. See further detail on the
       //    Storybook documentation at:
@@ -52,7 +48,6 @@ const preview: Preview = {
         },
       },
     },
-
     controls: {
       expanded: true,
       matchers: {
@@ -61,7 +56,6 @@ const preview: Preview = {
       },
       exclude: ['style'],
     },
-
     nextjs: {
       appDirectory: true,
     },
@@ -69,7 +63,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <div className="max-w-[min(480px,_100vw)] mx-auto mt-[12vh] pb-[20vh]">{Story()}</div>
+        <div className="mx-[6vw] mt-[12vh] pb-[20vh]">{Story()}</div>
       </ThemeProvider>
     ),
   ],

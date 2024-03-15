@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef } from 'react'
 
 import { Label as Radix$Label, type LabelProps as Radix$LabelProps } from '@radix-ui/react-label'
@@ -22,9 +24,10 @@ export interface LabelProps extends Radix$LabelProps {}
  *
  * @props {@link LabelProps}
  */
-const Label = forwardRef<LabelForwardedReferenceType, LabelProps>(({ children, className, ...props }) => (
+const Label = forwardRef<LabelForwardedReferenceType, LabelProps>(({ children, className, ...props }, ref) => (
   <Radix$Label
     {...props}
+    ref={ref}
     className={merge('text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70', className)}>
     {children}
   </Radix$Label>

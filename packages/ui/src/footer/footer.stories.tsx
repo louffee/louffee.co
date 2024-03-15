@@ -10,11 +10,13 @@ import Footer, { type FooterProps } from './footer'
 
 type Story = StoryObj<typeof FooterNavigation>
 
+const CURRENT_YEAR = new Date().getFullYear()
+
 export const Overview: Story = {
   args: {
     children: (
       <Fragment>
-        <Copyright>&copy; Acme Inc. {new Date().getFullYear()}. All rights reserved.</Copyright>
+        <Copyright>&copy; Acme Inc. {CURRENT_YEAR}. All rights reserved.</Copyright>
         <FooterNavigation>
           <FooterLink href="#">Lorem</FooterLink>
           <FooterLink href="#">Ipsum</FooterLink>
@@ -27,7 +29,7 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/Footer',
+  title: 'Library/Footer',
   component: Footer,
   subcomponents: {
     FooterLink,

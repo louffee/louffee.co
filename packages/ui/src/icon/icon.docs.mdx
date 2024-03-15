@@ -1,10 +1,14 @@
+import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
 import { Meta, Story } from '@storybook/blocks'
 
 import Icon from './icon'
+import * as Stories from './icon.stories'
 
-<Meta title="Components/Icon" component={Icon} />
+<Meta of={Stories} />
 
 # Icon
+
+<GitHubRepoPath path="packages/ui/src/components/icon/icon.tsx" />
 
 The component which renders an icon based on the given name from our 
 iconography. The icons are SVGs found in the internal modules of the Louffee's 
@@ -18,9 +22,9 @@ page of the style guide.
 ```tsx
 import Icon from '@louffee/ui/icon'
 
-<Icon name="GitHubLogo" height={60} width={60} className="text-black" />
+<Icon name="GitHubLogo" size={60} className="text-black" />
 ```
 
 Then, the result will be:
 
-<Icon name="GitHubLogo" height={60} width={60} className="text-black" />
+<Icon name="GitHubLogo" size={60} className="text-black" />

@@ -12,12 +12,12 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/FooterLink',
+  title: 'Library/FooterLink',
   component: FooterLink,
   subcomponents: {
     FooterLink,
   },
-  tags: ['navigation', 'footer', 'anchor'],
+  tags: ['navigation', 'footer', 'anchor', 'link'],
   argTypes: {
     children: {
       description: 'The label of the link rendered inside the footer section of the page.\n\n**Prop name:** `children`',

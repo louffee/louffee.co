@@ -1,9 +1,8 @@
-import { type JSX } from 'react'
+import type { JSX } from 'react'
 
 import Link from 'next/link'
 
 import getGitHubRepositoryPath from '@louffee/lib/get-github-repository-path'
-import Icon from '@louffee/ui/icon'
 
 interface GitHubRepoPathLinkProps {
   /**
@@ -13,17 +12,16 @@ interface GitHubRepoPathLinkProps {
 }
 
 function GitHubRepoPathLink({ path }: GitHubRepoPathLinkProps): JSX.Element {
+  const href = getGitHubRepositoryPath(path)
+
   return (
     <div
       style={{
-        position: 'absolute',
-        top: '6vh',
-        right: '30vw',
         cursor: 'pointer',
         zIndex: 1,
       }}>
-      <Link href={getGitHubRepositoryPath(path)} target="_blank" title="See it on GitHub">
-        <Icon name="GitHubLogo" className="text-black" height={24} width={24} aria-hidden="true" />
+      <Link href={href} target="_blank" title="See it on GitHub">
+        Source code
       </Link>
     </div>
   )

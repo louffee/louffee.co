@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import Button, { type ButtonProps } from './button'
 
@@ -31,7 +31,7 @@ export const Variants: Story = {
     },
   },
 }
-Variants.storyName = 'Button variants'
+Variants.storyName = '+ Variants'
 
 export const Sizes: Story = {
   args: {
@@ -45,10 +45,10 @@ export const Sizes: Story = {
     },
   },
 }
-Sizes.storyName = 'Button sizes'
+Sizes.storyName = '+ Sizes'
 
 export default {
-  title: 'Playground/Button',
+  title: 'Library/Button',
   component: Button,
   tags: ['action', 'call-to-action', 'button'],
   parameters: {

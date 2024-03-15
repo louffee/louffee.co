@@ -1,8 +1,7 @@
 import { useState, type JSX } from 'react'
 
-import { expect } from '@storybook/jest'
 import type { Meta, StoryObj } from '@storybook/react'
-import { userEvent, within } from '@storybook/testing-library'
+import { expect, userEvent, within } from '@storybook/test'
 
 import TextField, { type TextFieldProps } from './text-field'
 
@@ -140,7 +139,7 @@ export const Interaction: Story = {
 Interaction.storyName = '+ Interaction'
 
 export default {
-  title: 'Playground/TextField',
+  title: 'Library/TextField',
   component: TextField,
   args: {
     name: 'textField',

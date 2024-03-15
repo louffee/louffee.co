@@ -3,7 +3,7 @@ import { createRef } from 'react'
 import { render } from '@testing-library/react'
 import { expect, test } from 'vitest'
 
-import Heading, { HeadingVariant } from './heading'
+import Heading, { type HeadingVariant } from './heading'
 
 test.each(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as HeadingVariant[])('renders the heading with the %s variant', (variant) => {
   const childText = 'Lorem ipsum'

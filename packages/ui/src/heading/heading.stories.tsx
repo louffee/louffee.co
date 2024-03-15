@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import Heading, { type HeadingProps } from './heading'
 
@@ -7,7 +7,7 @@ type Story = StoryObj<HeadingProps>
 export const Overview: Story = {}
 
 export default {
-  title: 'Playground/Heading',
+  title: 'Library/Heading',
   component: Heading,
   args: {
     variant: 'h1',

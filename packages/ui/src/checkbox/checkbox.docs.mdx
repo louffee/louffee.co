@@ -1,21 +1,16 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
 import Link from 'next/link';
 
-import GitHubRepoPathLink from '@louffee/storybook/local-addons/github-repo-path-link'
+import GitHubRepoPathLink from '@louffee/storybook/local-addons/github-repo-path-link';
 
-import Checkbox from './checkbox'
-import * as Stories from './checkbox.stories'
+import Checkbox from './checkbox';
+import * as Stories from './checkbox.stories';
 
-<Meta 
-  title="Components/Checkbox"
-  argTypes={Stories.default.argTypes}
-  args={Stories.default.args}
-  parameters={Stories.default.parameters}
-/>
-
-<GitHubRepoPathLink path="packages/ui/src/checkbox/checkbox.tsx" />
+<Meta of={Stories} />
 
 # Checkbox
+
+<GitHubRepoPathLink path="packages/ui/src/checkbox/checkbox.tsx" />
 
 The checkbox component is used to select or deselect an option.
 

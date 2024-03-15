@@ -1,11 +1,11 @@
-import { type JSX, type SVGAttributes } from 'react'
+import type { JSX, SVGAttributes } from 'react'
 
 import merge from '../engine/merge'
 
 type SVGSVGElementAttributes = SVGAttributes<SVGElement>
 type SVGSVGElementAttributesExceptSome = Omit<SVGSVGElementAttributes, 'xmlns' | 'children' | 'fill'>
 
-interface SpinnerProps extends SVGSVGElementAttributesExceptSome {
+export interface SpinnerProps extends SVGSVGElementAttributesExceptSome {
   /**
    * @ignore
    */

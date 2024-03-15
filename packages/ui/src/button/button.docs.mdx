@@ -1,4 +1,4 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import { ArgTypes, Canvas, Meta, Story } from '@storybook/addon-docs'
 import Link from 'next/link'
 
 import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
@@ -8,17 +8,14 @@ import Icon from '../icon/icon'
 import Button from './button'
 import * as Stories from './button.stories'
 
-<Meta 
-  title="Components/Button" 
-  argTypes={Stories.default.argTypes} 
-  args={Stories.default.args} 
-  parameters={Stories.default.parameters} />
- 
-<GitHubRepoPath path="packages/ui/src/button/button.tsx" />
+<Meta of={Stories} /> 
 
 # Button
 
+<GitHubRepoPath path="packages/ui/src/button/button.tsx" />
+
 The button component is a simple button that can be used to trigger an action.
+
 
 ## Usage
 
@@ -41,7 +38,7 @@ variants. Below, a few of them are showcased:
 
 ## Props
 
-<ArgsTable of={Button} />
+<ArgTypes of={Stories.Overview} />
 
 ## Sorts of buttons
 

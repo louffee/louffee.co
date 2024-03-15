@@ -12,6 +12,7 @@ pre.prismjs {
 pre.prismjs, 
 code.prismjs,
 div[class*="language-"] .token,
+div[class*="language-"] > *,
 .docblock-source {
   font-family: "Menlo", "SF Mono", "JetBrains Mono", "Menlo", "Monaco", "Consolas", "Courier New", monospace !important;
   font-size: 1.125rem;

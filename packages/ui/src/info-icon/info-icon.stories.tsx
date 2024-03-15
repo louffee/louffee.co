@@ -19,7 +19,7 @@ export const WithTypography: Story = {
 WithTypography.storyName = '+ Typography'
 
 export default {
-  title: 'Playground/InfoIcon',
+  title: 'Library/InfoIcon',
   component: InfoIcon,
   args: {
     size: 'md',

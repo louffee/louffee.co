@@ -1,46 +1,46 @@
-import { Fragment } from 'react'
+import { Fragment } from "react";
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from "@storybook/react";
 
-import Button from '../button/button'
-import ToastAction from '../toast-action/toast-action'
-import ToastController from '../toast-controller/toast-controller'
-import toast, { type ToastFnPayload } from '../use-toast/toast'
+import Button from "../button/button";
+import ToastAction from "../toast-action/toast-action";
+import ToastController from "../toast-controller/toast-controller";
+import toast, { type ToastFnPayload } from "../use-toast/toast";
 
-import Toast from './toast'
+import Toast from "./toast";
 
-type Story = StoryObj<ToastFnPayload>
+type Story = StoryObj<ToastFnPayload>;
 
-export const Overview: Story = {}
+export const Overview: Story = {};
 
 export const WithAction: Story = {
   args: {
     action: <ToastAction altText="Undo">Undo</ToastAction>,
   },
-}
-WithAction.storyName = '+ Action'
+};
+WithAction.storyName = "+ Action";
 
 export const WithTitle: Story = {
   args: {
-    title: 'Lorem ipsum',
+    title: "Lorem ipsum",
   },
-}
-WithTitle.storyName = '+ Title'
+};
+WithTitle.storyName = "+ Title";
 
 export const WithTitleAndAction: Story = {
   args: {
-    title: 'Lorem ipsum',
+    title: "Lorem ipsum",
     action: <ToastAction altText="Undo">Undo</ToastAction>,
   },
-}
-WithTitleAndAction.storyName = '+ Title + Action'
+};
+WithTitleAndAction.storyName = "+ Title + Action";
 
 export default {
-  title: 'Functional/Toast',
+  title: "Functional/Toast",
   component: Toast,
   args: {
-    variant: 'default',
-    description: 'Lorem ipsum dolor sit amet',
+    variant: "default",
+    description: "Lorem ipsum dolor sit amet",
   },
   argTypes: {
     asChild: {
@@ -54,17 +54,18 @@ export default {
       },
     },
     title: {
-      name: 'Title',
-      description: 'The title of the toast.\n\n**Prop name**: `title`',
+      name: "Title",
+      description: "The title of the toast.\n\n**Prop name**: `title`",
       control: {
-        type: 'text',
+        type: "text",
       },
     },
     description: {
-      name: 'Description',
-      description: 'The description of the toast.\n\n**Prop name**: `description`',
+      name: "Description",
+      description:
+        "The description of the toast.\n\n**Prop name**: `description`",
       control: {
-        type: 'text',
+        type: "text",
       },
     },
   },
@@ -84,13 +85,13 @@ export default {
         variant,
         action,
         ...props,
-      })
+      });
     }
 
     return (
       <Button variant="secondary" onClick={handleClick}>
         Render a toast
       </Button>
-    )
+    );
   },
-} as Meta<ToastFnPayload>
+} as Meta<ToastFnPayload>;

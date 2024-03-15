@@ -11,7 +11,7 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/Copyright',
+  title: 'Library/Copyright',
   component: Copyright,
   argTypes: {
     children: {

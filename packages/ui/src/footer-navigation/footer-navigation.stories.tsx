@@ -21,7 +21,7 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/FooterNavigation',
+  title: 'Library/FooterNavigation',
   component: FooterNavigation,
   subcomponents: {
     FooterLink,

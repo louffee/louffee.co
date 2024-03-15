@@ -7,19 +7,11 @@ import * as Stories from './top-bar.stories'
 
 import TopBarButton from '../top-bar-button/top-bar-button'
 
-
-<Meta 
-  title="Components/TopBar"
-  component={TopBar}
-  subcomponents={{
-    TopBarButton,
-  }}
-  argTypes={Stories.default.argTypes}
-  args={Stories.default.args} />
-
-<GitHubRepoPath path="packages/ui/src/afloat-bar/afloat-bar.tsx" />
+<Meta of={Stories} />
 
 # TopBar
+
+<GitHubRepoPath path="packages/ui/src/afloat-bar/afloat-bar.tsx" />
 
 The top bar is a container which renders at the top of the screen. It is used to
 display the anchors which link to the different sections of the page or to

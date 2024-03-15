@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import TopBarButton, { type TopBarButtonProps } from './top-bar-button'
 
@@ -14,7 +14,7 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/TopBarButton',
+  title: 'Library/TopBarButton',
   component: TopBarButton,
   args: {
     size: 'md',

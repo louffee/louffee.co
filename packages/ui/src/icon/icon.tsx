@@ -25,6 +25,15 @@ export interface IconProps extends SVGSVGElementAttributesExceptSome {
    * @see {@link icons}
    */
   name: IconName
+  /**
+   * The size is a number that represents the width and height of the icon. If
+   * this value is set to `24`, the icon will be 24x24 pixels in size.
+   *
+   * If `height` and/or `width` are set, they will override the `size` prop. It
+   * is not recommended to use the `size` prop in combination with `height` and
+   * `width` props.
+   */
+  size?: number
 }
 
 /**
@@ -37,8 +46,11 @@ export interface IconProps extends SVGSVGElementAttributesExceptSome {
  *
  * @props {@link IconProps}
  */
-const Icon = forwardRef<IconForwardedReferenceType, IconProps>(({ name, width, height, className, ...props }, ref) => {
+const Icon = forwardRef<IconForwardedReferenceType, IconProps>(({ name, size, width, height, className, ...props }, ref) => {
   const Icon = icons[name]
+
+  const iconHeight = height || size
+  const iconWidth = width || size
 
   if (!Icon) {
     if (process.env.NODE_ENV === 'development') {
@@ -49,7 +61,20 @@ const Icon = forwardRef<IconForwardedReferenceType, IconProps>(({ name, width, h
     return null
   }
 
-  return <Icon width={width} height={height} className={merge(className)} ref={ref} {...props} />
+  if (size) {
+    if (height) {
+      console.warn(
+        `The "size" prop is set to ${size} and the "height" prop is set to ${height}. The "height" prop will override the "size" prop. It is not recommended to use the "size" prop in combination with "height" and "width" props. Please see the implementation of the <Icon name="${name}" size={${size}} height={${height}} /> component.`,
+      )
+    }
+    if (width) {
+      console.warn(
+        `The "size" prop is set to ${size} and the "width" prop is set to ${width}. The "width" prop will override the "size" prop. It is not recommended to use the "size" prop in combination with "width" and "width" props. Please see the implementation of the <Icon name="${name}" size={${size}} width={${width}} /> component.`,
+      )
+    }
+  }
+
+  return <Icon width={iconWidth} height={iconHeight} className={merge(className)} ref={ref} {...props} />
 })
 
 Icon.displayName = 'Icon'

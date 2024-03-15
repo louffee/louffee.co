@@ -7,7 +7,7 @@ type Story = StoryObj<ViewportAxisProps>
 export const Overview: Story = {}
 
 export default {
-  title: 'Playground/ViewportAxis',
+  title: 'Library/ViewportAxis',
   component: ViewportAxis,
   args: {
     children: 'This is content of the component.',

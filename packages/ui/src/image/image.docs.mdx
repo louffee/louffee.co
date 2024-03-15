@@ -1,21 +1,16 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
 import Link from 'next/link'
-
 
 import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
 
 import Image from './image'
 import * as Stories from './image.stories'
 
-<Meta 
-  title="Components/Image" 
-  argTypes={Stories.default.argTypes} 
-  args={Stories.default.args} 
-  parameters={Stories.default.parameters} />
-
-<GitHubRepoPath path="packages/ui/src/image/image.tsx" />
+<Meta of={Stories} />
 
 # Image
+
+<GitHubRepoPath path="packages/ui/src/image/image.tsx" />
 
 The image component is a wrapper around the native Next.js Image component API. 
 It provides a way to lazy load images and display a placeholder while the image 
@@ -25,7 +20,7 @@ is loading.
 ## Usage
 
 ```tsx
-import { Image } from '@louffee/ui'
+import Image from '@louffee/ui/image'
 
 <Image 
   src="/assets/logo.svg" 

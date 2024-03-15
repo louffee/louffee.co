@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import AfloatBar, { type AfloatBarProps } from './afloat-bar'
 
@@ -15,7 +15,7 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/AfloatBar',
+  title: 'Library/AfloatBar',
   component: AfloatBar,
   tags: ['navigation', 'bar'],
   parameters: {

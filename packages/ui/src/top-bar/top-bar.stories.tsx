@@ -11,7 +11,7 @@ type Story = StoryObj<TopBarProps>
 export const Overview: Story = {}
 
 export default {
-  title: 'Playground/TopBar',
+  title: 'Library/TopBar',
   component: TopBar,
   subcomponents: {
     TopBarButton,

@@ -12,7 +12,7 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/Blockquote',
+  title: 'Library/Blockquote',
   component: Blockquote,
   argTypes: {
     children: {

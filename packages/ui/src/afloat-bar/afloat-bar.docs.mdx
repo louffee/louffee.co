@@ -1,19 +1,17 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import { ArgTypes, Canvas, Meta, Story } from '@storybook/addon-docs'
+
+import Button from '../button/button'
 
 import AfloatBar from './afloat-bar'
 import * as Stories from './afloat-bar.stories'
 
 import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
 
-<Meta 
-  title="Components/AfloatBar" 
-  argTypes={Stories.default.argTypes}
-  args={Stories.default.args}
-  parameters={Stories.default.parameters} />
-
-<GitHubRepoPath path="packages/ui/src/afloat-bar/afloat-bar.tsx" />
+<Meta of={Stories} />
 
 # AfloatBar
+
+<GitHubRepoPath path="packages/ui/src/afloat-bar/afloat-bar.tsx" />
 
 The AfloatBar component is a floating bar that can be used to display a message,
 a call to action, or any other content.
@@ -30,6 +28,27 @@ Then, the component will be rendered as:
 
 <AfloatBar>Lorem Ipsum</AfloatBar>
 
+Adding actions to the AfloatBar component, such as the `Button` component, can 
+be done as follows, producing the result below. Also, the `AfloatBar` component
+receives the props from the native `div` HTML element, therefore, it can receive
+custom classes and styles. See the following example:
+
+```tsx
+<AfloatBar className='flex justify-center items-center gap-3 p-3'>
+  <Button variant="ghost">Lorem</Button>
+  <Button variant="ghost">Ipsum</Button>
+  <Button variant="ghost">Sit</Button>
+  <Button variant="ghost">Dolor</Button>
+</AfloatBar>
+```
+
+<AfloatBar className='flex justify-center items-center gap-3 p-3'>
+  <Button variant="ghost">Lorem</Button>
+  <Button variant="ghost">Ipsum</Button>
+  <Button variant="ghost">Sit</Button>
+  <Button variant="ghost">Dolor</Button>
+</AfloatBar>
+
 ## Stories
 
 The AfloatBar component has several stories. Below, a few of them are showcased:
@@ -38,4 +57,4 @@ The AfloatBar component has several stories. Below, a few of them are showcased:
 
 ## Props
 
-<ArgsTable of={AfloatBar} />
+<ArgTypes of={Stories} />

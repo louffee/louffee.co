@@ -11,6 +11,10 @@ type Radix$IconName = keyof Radix$TypeofIcons
  */
 export type IconName = SuppressSuffix<Radix$IconName, 'Icon'>
 
+/**
+ * The object which defines the React components for each of the icons that are
+ * available in the `@radix-ui/react-icons` package.
+ */
 const icons = Object.entries(Radix$Icons).reduce<Record<IconName, Radix$TypeofIcons[`${IconName}Icon`]>>(
   (acc, [key, value]) => {
     acc[removeSuffix(key, 'Icon') as IconName] = value

@@ -27,7 +27,9 @@
     "format": "bun x @biomejs/biome format ./{packages,apps}/* --write",
     "clean:node_modules": "rm -rf ./node_modules bun.lockb",
     "storybook": "( cd apps/storybook && bun run storybook )",
+    "storybook:debug": "( cd apps/storybook && bun run storybook:debug )",
     "sb": "( cd apps/storybook && bun run storybook )",
+    "sb:debug": "( cd apps/storybook && bun run storybook:debug )",
     "test": "vitest --config vitest.config.ts",
     "docker:up": "docker compose -f .docker/docker-compose.yaml up -d",
     "docker:down": "docker compose -f ./.docker/docker-compose.yaml down",
@@ -35,7 +37,8 @@
     "db:generate": "( cd packages/drizzle && bun run db:generate )",
     "db:migration": "( cd packages/drizzle && bun run db:migration )",
     "db:seed": "( cd packages/drizzle && bun run db:seed )",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "mdx:issue-checker": "npx @hipster/mdx2-issue-checker"
   },
   "peerDependencies": {
     "typescript": "^5"

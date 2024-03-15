@@ -5,6 +5,15 @@ const defaultConfiguration = require('@louffee/next-config/next.config')
  */
 const configuration = {
   ...defaultConfiguration,
+  async redirects() {
+    return [
+      {
+        source: '/:lang/terms',
+        destination: '/:lang/terms-and-conditions',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = configuration

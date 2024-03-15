@@ -33,7 +33,7 @@ export const WithLabel: Story = {
 WithLabel.storyName = '+ Label'
 
 export default {
-  title: 'Playground/Checkbox',
+  title: 'Library/Checkbox',
   component: Checkbox,
   argTypes: {
     checked: {

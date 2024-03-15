@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import Input, { type InputProps } from './input'
 
@@ -9,24 +9,9 @@ export const Overview: Story = {
 }
 
 export default {
-  title: 'Playground/Input',
+  title: 'Library/Input',
   component: Input,
   tags: ['action', 'input', 'form', 'form-field'],
-  parameters: {
-    docs: {
-      disabled: true,
-    },
-    controls: {
-      expanded: true,
-    },
-    previewTabs: {
-      previewTabs: {
-        'storybook/docs/panel': {
-          index: -1,
-        },
-      },
-    },
-  },
   args: {
     placeholder: 'Placeholder text',
   },

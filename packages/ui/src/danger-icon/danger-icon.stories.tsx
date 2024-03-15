@@ -19,7 +19,7 @@ export const WithTypography: Story = {
 WithTypography.storyName = '+ Typography'
 
 export default {
-  title: 'Playground/DangerIcon',
+  title: 'Library/DangerIcon',
   component: DangerIcon,
   args: {
     size: 'md',

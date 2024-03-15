@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, type JSX } from 'react'
+import type { ComponentPropsWithoutRef, JSX } from 'react'
 
 import AfloatBar from '../afloat-bar/afloat-bar'
 import merge from '../engine/merge'

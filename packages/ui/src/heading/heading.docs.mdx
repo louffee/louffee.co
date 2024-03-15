@@ -1,4 +1,4 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import { Canvas, Meta, Story } from '@storybook/addon-docs'
 import Link from 'next/link'
 
 import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
@@ -6,15 +6,11 @@ import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-lin
 import Heading from './heading'
 import * as Stories from './heading.stories'
 
-<Meta 
-  title="Components/Heading" 
-  argTypes={Stories.default.argTypes} 
-  args={Stories.default.args} 
-  parameters={Stories.default.parameters} />
-
-<GitHubRepoPath path="packages/ui/src/components/heading/heading.tsx" />
+<Meta of={Stories} />
 
 # Heading
+
+<GitHubRepoPath path="packages/ui/src/components/heading/heading.tsx" />
 
 The heading component is used to display a title or a section heading. It is 
 used to give a clear indication of what the user is looking at. Also, it 

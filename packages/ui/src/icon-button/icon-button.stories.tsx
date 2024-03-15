@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import icons from '../icon/icons'
 
@@ -21,6 +21,7 @@ export const Overview: Story = {
 export const Variants: Story = {
   args: {
     variant: 'primary',
+    asChild: false,
   },
   argTypes: {
     asChild: {
@@ -30,25 +31,15 @@ export const Variants: Story = {
     },
   },
 }
-Variants.storyName = 'Icon button variants'
+Variants.storyName = '+ Variants'
 
 export default {
-  title: 'Playground/IconButton',
+  title: 'Library/IconButton',
   component: IconButton,
-  tags: ['action', 'call-to-action', 'button'],
+  tags: ['action', 'call-to-action', 'button', 'icon'],
   parameters: {
-    docs: {
-      disabled: true,
-    },
     controls: {
       expanded: true,
-    },
-    previewTabs: {
-      previewTabs: {
-        'storybook/docs/panel': {
-          index: -1,
-        },
-      },
     },
   },
   args: {
@@ -87,6 +78,9 @@ export default {
         type: {
           summary: 'asChild: boolean',
         },
+        defaultValue: {
+          summary: 'false',
+        },
       },
     },
     variant: {
@@ -99,6 +93,9 @@ export default {
       table: {
         type: {
           summary: '"primary" | "secondary" | "destructive" | "outlined" | "ghost" | "link"',
+        },
+        defaultValue: {
+          summary: '"primary"',
         },
       },
     },

@@ -5,15 +5,11 @@ import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-lin
 import TopBarButton from './top-bar-button'
 import * as Stories from './top-bar-button.stories'
 
-<Meta 
-  title="Components/TopBarButton"
-  component={TopBarButton}
-  argTypes={Stories.default.argTypes}
-  args={Stories.default.args} />
-
-<GitHubRepoPath path="packages/ui/src/top-bar-button/top-bar-button.tsx" />
+<Meta of={Stories} />
 
 # TopBarButton
+
+<GitHubRepoPath path="packages/ui/src/top-bar-button/top-bar-button.tsx" />
 
 The component that renders an [anchor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 HTML element that triggers a redirection via the Next.js 

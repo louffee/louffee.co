@@ -1,14 +1,14 @@
-import { ArgsTable, Meta } from '@storybook/blocks'
-
+import { Meta } from '@storybook/blocks'
 import GitHubRepoPath from '@louffee/storybook/local-addons/github-repo-path-link'
 
 import Spinner from './spinner'
+import * as Stories from './spinner.stories'
 
-<Meta title="Components/Spinner" component={Spinner} />
-
-<GitHubRepoPath path="packages/ui/src/spinner/spinner.tsx" />
+<Meta of={Stories} />
 
 # Spinner
+
+<GitHubRepoPath path="packages/ui/src/spinner/spinner.tsx" />
 
 A spinner component is used to indicate that a page or component is loading. It
 is recommended to use a spinner when a skeleton loading state is not possible or
