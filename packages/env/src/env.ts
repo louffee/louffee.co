@@ -1,13 +1,7 @@
-import path from 'node:path'
-
-import dotenv from 'dotenv'
 import { z } from 'zod'
+import loadEnvironment from './load-environment'
 
-dotenv.config({
-  encoding: 'UTF-8',
-  debug: true,
-  path: path.resolve(process.cwd(), '..', '..', '.env'),
-})
+loadEnvironment()
 
 /**
  * The object which defines the environment key names.
@@ -46,11 +40,16 @@ const environmentKeyMap = {
       name: 'CLOUDFLARE_STORAGE_BUCKET_NAME',
     },
   },
-  nextAuth: {
-    secret: 'NEXTAUTH_SECRET',
-    URL: 'NEXTAUTH_URL',
+  clerkJS: {
+    secret: {
+      key: 'CLERK_SECRET_KEY',
+    },
     public: {
-      nextAuthURL: 'NEXT_PUBLIC_NEXTAUTH_URL',
+      publishableKey: 'NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY',
+      signInURL: 'NEXT_PUBLIC_CLERK_SIGN_IN_URL',
+      signUpURL: 'NEXT_PUBLIC_CLERK_SIGN_UP_URL',
+      afterSignInURL: 'NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL',
+      afterSignUpURL: 'NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL',
     },
   },
   googleClient: {
@@ -101,9 +100,12 @@ const EnvironmentVariablesSchema = z.object({
   [environmentKeyMap.cloudflare.uploadBucket.name]: z.string().default('<upload_bucket_name>'),
   [environmentKeyMap.cloudflare.storage.name]: z.string().default('<storage_bucket_name>'),
 
-  [environmentKeyMap.nextAuth.secret]: z.string().default('<nextauth_secret>'),
-  [environmentKeyMap.nextAuth.URL]: z.string().default('http://localhost:3000'),
-  [environmentKeyMap.nextAuth.public.nextAuthURL]: z.string().default('http://localhost:3000'),
+  [environmentKeyMap.clerkJS.secret.key]: z.string().default('<clerk_secret_key>'),
+  [environmentKeyMap.clerkJS.public.publishableKey]: z.string().default('<clerk_publishable_key>'),
+  [environmentKeyMap.clerkJS.public.signInURL]: z.string().default('<clerk_sign_in_url>'),
+  [environmentKeyMap.clerkJS.public.signUpURL]: z.string().default('<clerk_sign_up_url>'),
+  [environmentKeyMap.clerkJS.public.afterSignInURL]: z.string().default('<clerk_after_sign_in_url>'),
+  [environmentKeyMap.clerkJS.public.afterSignUpURL]: z.string().default('<clerk_after_sign_up_url>'),
 
   [environmentKeyMap.googleClient.id]: z.string().default('<google_client_id>'),
   [environmentKeyMap.googleClient.secret]: z.string().default('<google_client_secret>'),
