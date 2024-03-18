@@ -9,18 +9,16 @@ vi.mock('next/image', () => ({
 
 describe('given that an asset is loaded onto the page', () => {
   describe('when the image is rendered', () => {
-    describe('and the alt text is NOT provided', () => {
+    describe('and the alt text is falsy', () => {
       test('then log an error to the console', () => {
         const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {})
         const imageSource = '/path/to/image.jpg'
 
-        // @ts-expect-error NOTE: We are testing the error message
-        render(<Image src={imageSource} width={18} height={18} />)
+        render(<Image src={imageSource} alt="" width={18} height={18} />)
 
         expect(consoleError).toHaveBeenCalledWith(
           `The source of the image must have an alt attribute. Please review the <Image src=\"${imageSource}\" alt=\"\" /> and provide an alt attribute for the image.`,
         )
-
         consoleError.mockRestore()
       })
     })
