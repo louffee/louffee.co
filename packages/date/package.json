@@ -1,0 +1,11 @@
+{
+  "name": "@louffee/date",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "homepage": "https://github.com/louffee/louffee.co/tree/main/packages/testing-library-ext",
+  "dependencies": {
+    "dayjs": "^1"
+  }
+}
