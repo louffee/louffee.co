@@ -1,3 +1,4 @@
+import prependString from '@louffee/lib/prepend-string'
 import { NextResponse, type NextRequest } from 'next/server'
 
 import constants from './constants'
@@ -19,8 +20,9 @@ export interface DetectLanguageMiddlewareOptions extends MatchLanguageOptions {
 }
 
 /**
- * Detects the language from the request and redirects to the correct language
- * if the language is not set.
+ * The `detectLanguageMiddleware()` creates a function which detects the
+ * language from the request and redirects to the correct language if the
+ * language is not set.
  *
  * If the language is not set, it will redirect to the `default` language. The
  * language is defined in the `NEXT_language` cookie and the user is redirected
@@ -55,27 +57,35 @@ function detectLanguageMiddleware({ defaultLanguage, languages, ignoredPaths }: 
     //       of the object must be "accept-language" (case sensitive). For
     //       reference, see:
     //       https://github.com/jshttp/negotiator/blob/master/index.js#L62C1-L63C1
-    request.headers.forEach((value, key) => {
-      negotiatorHeaders[key] = value
-    })
+    for (const [key, value] of request.headers) {
+      if (key.toLowerCase() === 'accept-language') {
+        negotiatorHeaders[key] = value
+      }
+    }
 
     const isPathnameMissingLocale = !hasPathnameAnyLanguage(pathname, languages)
 
     if (isPathnameMissingLocale) {
       const locale = matchLanguage(negotiatorHeaders, { defaultLanguage, languages })
 
-      const slashAfterLocale = `${pathname.startsWith('/') ? '' : '/'}`
       const searchParams = request.nextUrl.searchParams?.length ? `?${request.nextUrl.searchParams}` : ''
+      const pathnameWithSlash = prependString('/', pathname)
 
-      const redirectPath = `${locale}${slashAfterLocale}${pathname}${searchParams}`
+      const redirectPath = `${locale}${pathnameWithSlash}${searchParams}`
       const redirectBase = request.url
 
       const href = `${redirectBase}${redirectPath}`
 
-      const response = NextResponse.next()
+      // NOTE: We have to set the language cookie here because the `redirect()`.
+      //       So we create the NextResponse from the redirect() static method,
+      //       inject the LANGUAGE_COOKIE_NAME and return the response, which
+      //       Next.js interprets as the end of the middleware chain. See the
+      //       official documentation on how to use the `redirect()` method:
+      //       https://nextjs.org/docs/app/api-reference/functions/next-response#redirect
+      const response = NextResponse.redirect(href)
       response.cookies.set(constants.LANGUAGE_COOKIE_NAME, locale)
 
-      return NextResponse.rewrite(href, response)
+      return response
     }
 
     const response = NextResponse.next()
