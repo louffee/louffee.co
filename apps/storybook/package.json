@@ -46,7 +46,7 @@
     "@types/react-dom": "^18",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.17",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^9.0.0",
     "fs": "^0.0.1-security",
     "postcss": "^8.4.35",
     "postcss-pseudo-companion-classes": "^0.1.1",
