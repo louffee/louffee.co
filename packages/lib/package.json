@@ -26,6 +26,7 @@
     "./parse-form-data": "./src/parse-form-data.ts",
     "./prefix-keys": "./src/prefix-keys.ts",
     "./prefix": "./src/prefix.ts",
+    "./prepend-string": "./src/prepend-string.ts",
     "./remove-suffix": "./src/remove-suffix.ts",
     "./suppress-suffix": "./src/suppress-suffix.ts",
     "./throttle": "./src/throttle.ts"
