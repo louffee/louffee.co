@@ -28,6 +28,6 @@ jobs:
         run: bun run test:coverage
 
       - name: Publish coverage
-        uses: romeovs/lcov-reporter-action@v0.2.16
+        uses: romeovs/lcov-reporter-action@v0.4.0
         with:
           lcov-file: ./coverage/lcov.info
