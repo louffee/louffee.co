@@ -12,7 +12,7 @@
   "peerDependencies": {
     "@louffee/env": "workspace:*",
     "@supabase/supabase-js": "^2",
-    "@supabase/ssr": "^0.1.0",
+    "@supabase/ssr": "^0.1.0 || ^0.5.0",
     "drizzle-orm": "^0.29.4",
     "drizzle-zod": "^0.5.1",
     "postgres": "^3.4.3",
