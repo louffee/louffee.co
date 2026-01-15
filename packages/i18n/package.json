@@ -17,7 +17,7 @@
     "typescript": "^5"
   },
   "peerDependencies": {
-    "@formatjs/intl-localematcher": "^0.5.4",
+    "@formatjs/intl-localematcher": "^0.5.4 || ^0.8.0",
     "negotiator": "^0.6.2",
     "server-only": "^0.0.1"
   }
