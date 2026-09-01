@@ -16,7 +16,7 @@
     "@formatjs/intl-localematcher": "^0.5.4",
     "@hookform/resolvers": "^3",
     "cuid": "^3",
-    "next": "^14",
+    "next": "^15.5.21",
     "react": "^18",
     "react-dom": "^18",
     "@radix-ui/react-slot": "^1",
