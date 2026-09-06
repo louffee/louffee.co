@@ -13,7 +13,7 @@
     "@louffee/lib": "workspace:*",
     "@louffee/i18n": "workspace:*",
     "@louffee/hook-form": "workspace:*",
-    "@formatjs/intl-localematcher": "^0.5.4",
+    "@formatjs/intl-localematcher": "^0.8.0",
     "@hookform/resolvers": "^3",
     "cuid": "^3",
     "next": "^14",
