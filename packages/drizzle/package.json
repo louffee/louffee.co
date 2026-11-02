@@ -16,7 +16,7 @@
     "drizzle-orm": "^0.29.4",
     "drizzle-zod": "^0.5.1",
     "postgres": "^3.4.3",
-    "zod": "^3"
+    "zod": "^3 || ^4.0.0"
   },
   "devDependencies": {
     "@auth/core": "^0.28.0",

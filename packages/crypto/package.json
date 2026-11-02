@@ -7,6 +7,6 @@
     "./decrypt": "./src/decrypt.ts"
   },
   "peerDependencies": {
-    "zod": "^3"
+    "zod": "^3 || ^4.0.0"
   }
 }
